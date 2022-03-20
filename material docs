@@ -43,8 +43,10 @@ local plr = game.Players.LocalPlayer
 local function tp(place)
     plr.Character.HumanoidRootPart.CFrame = place.CFrame
 end
-
 local Page = UI.New({Title = "Main"})
+local Misc = UI.New({Title = "Misc"})
+Misc.Button({Text = 'made by ouw#7809', Callback = function()
+end})
 
 Page.Toggle({Text = "Toggle", Callback = function()
 end})
