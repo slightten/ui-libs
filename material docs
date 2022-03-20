@@ -1,7 +1,7 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/slightten/ui-libs/main/material"))()
 
 local UI = Material.Load({
-     Title = "Getting Started",
+     Title = "ouwHub",
      Style = 3,
      SizeX = 500,
      SizeY = 370,
