@@ -1,0 +1,66 @@
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/slightten/ui-libs/main/material"))()
+
+local UI = Material.Load({
+     Title = "Getting Started",
+     Style = 3,
+     SizeX = 500,
+     SizeY = 370,
+     ColorOverrides = {
+        MainFrame = Color3.fromRGB(15,15,15),
+        Minimise = Color3.fromRGB(255,68,68),
+        MinimiseAccent = Color3.fromRGB(147,59,0),
+        Maximise = Color3.fromRGB(25,255,0),
+        MaximiseAccent = Color3.fromRGB(0,255,110),
+        NavBar = Color3.fromRGB(235,235,235),
+        NavBarAccent = Color3.fromRGB(32,32,32),
+        NavBarInvert = Color3.fromRGB(235,235,235),
+        TitleBar = Color3.fromRGB(30, 30, 30),
+        TitleBarAccent = Color3.fromRGB(255,255,255),
+        Overlay = Color3.fromRGB(30, 30, 30),
+        Banner = Color3.fromRGB(30, 30, 30),
+        BannerAccent = Color3.fromRGB(255,255,255),
+        Content = Color3.fromRGB(85,85,85),
+        Button = Color3.fromRGB(40, 40, 40),
+        ButtonAccent = Color3.fromRGB(235, 235, 235),
+        ChipSet = Color3.fromRGB(45, 45, 45),
+        ChipSetAccent = Color3.fromRGB(255, 255, 255),
+        DataTable = Color3.fromRGB(160,160,160),
+        DataTableAccent = Color3.fromRGB(45,45,45),
+        Slider = Color3.fromRGB(45,45,45),
+        SliderAccent = Color3.fromRGB(235,235,235),
+        Toggle = Color3.fromRGB(230, 230, 230),
+        ToggleAccent = Color3.fromRGB(235, 235, 235),
+        Dropdown = Color3.fromRGB(45, 45, 45),
+        DropdownAccent = Color3.fromRGB(235,235,235),
+        ColorPicker = Color3.fromRGB(10, 10, 10),
+        ColorPickerAccent = Color3.fromRGB(235,235,235),
+        TextField = Color3.fromRGB(55,55,55),
+        TextFieldAccent = Color3.fromRGB(235,235,235),
+    }
+})
+
+local plr = game.Players.LocalPlayer
+local function tp(place)
+    plr.Character.HumanoidRootPart.CFrame = place.CFrame
+end
+
+local Page = UI.New({Title = "Main"})
+
+Page.Toggle({Text = "Toggle", Callback = function()
+end})
+
+Page.Button({Text = "Button", Callback = function()
+end})
+
+Page.Dropdown({Text = "Dropdown", Callback = function()
+end,
+Options = list})
+
+Page.Slider({Text = "Slider", Callback = function()
+end,
+Min = 16,
+Max = 200,
+Def = 16})
+
+Page.TextField({Text = "TextBox", Callback = function()
+end})
