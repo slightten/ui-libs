@@ -54,15 +54,11 @@ end})
 Page.Button({Text = "Button", Callback = function()
 end})
 
-Page.Dropdown({Text = "Dropdown", Callback = function()
-end,
-Options = list})
+Page.Dropdown({Text = "Dropdown", Options = list, Callback = function()
+end})
 
-Page.Slider({Text = "Slider", Callback = function()
-end,
-Min = 16,
-Max = 200,
-Def = 16})
+Page.Slider({Text = "Slider",Min = 16, Max = 200, Def = 16, Callback = function()
+end})
 
 Page.TextField({Text = "TextBox", Callback = function()
 end})
