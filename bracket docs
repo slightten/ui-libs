@@ -1,0 +1,40 @@
+for i,v in pairs(game.CoreGui:GetChildren()) do
+    if v:IsA"ScreenGui" and v:FindFirstChild("Main") then
+        if v.Main:FindFirstChild("Border") then
+            v:Destroy()
+        end
+    end
+end
+
+local Config = {
+    WindowName = "ouwHub",
+	Color = Color3.fromRGB(0,120,255),
+	Keybind = Enum.KeyCode.RightBracket
+}
+local plr = game.Players.LocalPlayer
+local function tp(place)
+    plr.Character.HumanoidRootPart.CFrame = place
+end
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlexR32/Roblox/main/BracketV3.lua"))()
+local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
+local Tab1 = Window:CreateTab("Main")
+local Tab2 = Window:CreateTab("Misc")
+local Section1 = Tab1:CreateSection("Main")
+Window:SetBackground("5553946656")
+Window:SetBackgroundColor(Color3.fromRGB(0,0,0))
+local Section112123123 = Tab2:CreateSection("Misc")
+Section112123123:CreateLabel("made by ouw#7809")
+
+local Button1 = Section1:CreateButton("Button", function()
+end)
+
+local Toggle1 = Section1:CreateToggle("Toggle", nil, function(a)
+end)
+Toggle1:CreateKeybind("", function()
+end)
+
+local TextBox1 = Section1:CreateTextBox("TextBox", "", false, function()
+end)
+
+local Dropdown1 = Section1:CreateDropdown("Dropdown", {'list'}, function()
+end)
