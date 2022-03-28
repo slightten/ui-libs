@@ -9,7 +9,7 @@ end
 local Config = {
     WindowName = "ouwHub",
 	Color = Color3.fromRGB(0,120,255),
-	Keybind = Enum.KeyCode.RightBracket
+	Keybind = Enum.KeyCode.RightControl
 }
 local plr = game.Players.LocalPlayer
 local function tp(place)
