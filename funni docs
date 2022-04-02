@@ -1,53 +1,28 @@
 _G.Color = Color3.fromRGB(66, 135, 245)
 _G.Color2 = Color3.fromRGB(66, 135, 245)
 
-local library = loadstring(game:HttpGet("https://pastebin.com/raw/wTRkSQU8"))()
-local window = library:CreateWindow("LeadMarker#1219", "E")
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/slightten/ui-libs/main/funni"))()
+local window = library:CreateWindow("ouwHub", "")
+local tab1 = window:CreateTab("Main")
+local tab2 = window:CreateTab("Misc")
+local miscsect = tab2:CreateSector("Misc", 'left')
+miscsect:AddLabel("made by ouw#7809")
 
--- // Tabs \\ -- 
-local tab1 = window:CreateTab("Autofarm")
-local tab2 = window:CreateTab("Legit")
-local tab3 = window:CreateTab("Rage")
-
--- // Sectors \\ --
 local sect1 = tab1:CreateSector("Autofarm", 'left')
-local sect2 = tab1:CreateSector("Teleports", 'right')
 
--- // Button \\ --
 sect1:AddButton("Button", function() 
 end)
 
--- // Toggle \\ --
-sect1:AddToggle("Toggle", false, function()
-    
+local Toggle = sect1:AddToggle("Toggle", false, function()   
+end)
+Toggle:AddKeybind(CRAP,function()
 end)
 
--- // Label \\ -- 
-sect1:AddLabel("Textlabel")
-
--- // Keybind \\ -- 
-sect1:AddKeybind("Keybind", 'E', function(key)
-    print(key)
+sect1:AddDropdown("Dropdown", list, '', false, function()
 end)
 
--- // Dropdown \\ - 
-sect1:AddDropdown("Dropdown", {"1", "2", "3"}, '1', false, function(v)
-    print(v)
+sect1:AddTextbox("TextBox", "", function()
 end)
 
--- // Textbox \\ -- 
-sect1:AddTextbox("TextBox", "NONE", function()
+sect1:AddSlider("Slider", 16, 16, 200, false, function()
 end)
-
--- // Slider \\ -- \
-sect1:AddSlider("Slider", 16, 16, 200, false, function(v)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
-end)
-
--- // Color Picker \\ -- 
-sect1:AddColorpicker("ColorPicker", Color3.fromRGB(0,0,0), function(v)
-    print(v)
-end)
-
- -- // Seperator \\ --
-sect1:AddSeperator("klsjdfljsdflj")
