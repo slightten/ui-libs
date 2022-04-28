@@ -2319,7 +2319,6 @@ function library:Close()
             inputService.MouseIconEnabled = true
 		end
 		self.main.Visible = self.open
-		self.cursor.Visible  = self.open
 		self.cursor1.Visible  = self.open
 	end
 end
