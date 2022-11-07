@@ -52,10 +52,6 @@ SettingSection:AddSlider({text = "Tile Size", min = 50, max = 500, value = 50, c
     end
 end});
 
--- [Discord Button]
-SettingSection:AddButton({text = "Discord", callback = function()
-end});
-
 -- [Config Box]
 ConfigSection:AddBox({text = "Config Name", skipflag = true});
 
