@@ -720,6 +720,7 @@ function library:init()
         self.cursor1.Visible = self.open
         self.cursor2.Visible = self.open
         if self.cursor1.Visible then
+            inputservice.MouseIconEnabled = false
             local pos = inputservice:GetMouseLocation();
             self.cursor1.PointA = pos;
             self.cursor1.PointB = pos + newVector2(16,5);
@@ -727,6 +728,8 @@ function library:init()
             self.cursor2.PointA = self.cursor1.PointA + newVector2(0, 0)
             self.cursor2.PointB = self.cursor1.PointB + newVector2(1, 1)
             self.cursor2.PointC = self.cursor1.PointC + newVector2(1, 1)
+        else
+            inputservice.MouseIconEnabled = true
         end
     end
 
@@ -4804,6 +4807,14 @@ function library:CreateSettingsTab(menu)
     mainSection:AddSlider({text = 'Position Y', flag = 'keybind_indicator_y', min = 0, max = 100, increment = .1, value = 35, callback = function()
         library.keyIndicator:SetPosition(newUDim2(library.flags.keybind_indicator_x / 100, 0, library.flags.keybind_indicator_y / 100, 0));    
     end});
+
+    mainSection:AddSeparator({text = 'Watermark'})
+    mainSection:AddToggle({text = 'Enabled', flag = 'watermark_enabled'});
+    mainSection:AddList({text = 'Position', flag = 'watermark_pos', selected = 'Custom', values = {'Top', 'Top Left', 'Top Right', 'Bottom Left', 'Bottom Right', 'Custom'}, callback = function(val)
+        library.watermark.lock = val;
+    end})
+    mainSection:AddSlider({text = 'Custom X', flag = 'watermark_x', suffix = '%', min = 0, max = 100, increment = .1});
+    mainSection:AddSlider({text = 'Custom Y', flag = 'watermark_y', suffix = '%', min = 0, max = 100, increment = .1});
 
     local themeStrings = {"Custom"};
     for _,v in next, library.themes do
