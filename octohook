@@ -3976,6 +3976,7 @@ function library:init()
 
                     function box:ReleaseFocus(apply)
                         box.focused = false;
+                        actionservice:UnbindAction('FreezeMovement');
                         self.objects.inputText.ThemeColor = 'Option Text 2';
                         if apply then
                             box:SetInput(input);
