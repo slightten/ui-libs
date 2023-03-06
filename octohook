@@ -604,6 +604,7 @@ function library:Unload()
     end
     table.clear(self.drawings)
     getgenv().library = nil
+    inputservice.MouseIconEnabled = false
 end
 
 function library:init()
