@@ -95,3 +95,7 @@ ConfigSection:AddButton({text = "Delete", callback = function()
         end
     end
 end});
+
+-- [Init] --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+library:Init();
+library:selectTab(library.tabs[1]);
